@@ -1,0 +1,40 @@
+body,p,h1,h2,h3,h4,h5,h6,img,table,tr,th,td,ul,ol,li {
+  pading: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  zoom: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: visible;
+  }
+}

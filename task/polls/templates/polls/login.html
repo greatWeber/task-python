@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登陆</title>
+  <link rel="stylesheet" href="{% static '/polls/dist/css/login.css' %}">
+</head>
+<body>
+<div class="bg">
+  <div class="mark"></div>
+</div>
+<div class="form-box">
+  <div class="logo">
+    <span class="icon-task"></span>
+  </div>
+  <form action="#" class="form">
+    <div class="form-item">
+      <input type="text" name="name" id="name" value="">
+      <label for="name" class="label icon-name"></label>
+    </div>
+    <div class="form-item">
+      <input type="password" name="password" id="psd" value="">
+      <label for="psd" class="label icon-psd"></label>
+    </div>
+    <div class="form-btn">
+      <span class="submit icon-right"></span>
+    </div>
+  </form>
+</div>
+</body>
+</html>

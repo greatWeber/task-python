@@ -1,0 +1,69 @@
+$fontPath : '../fonts/';
+
+@font-face {
+	font-family: "font-default";
+	src: url($fontPath+'font-default.eot');
+	src: url($fontPath+'font-default.eot?#iefix') format('embedded-opentype'),
+		url($fontPath+'font-default.woff') format('woff'),
+		url($fontPath+'font-default.ttf') format('truetype'),
+		url($fontPath+'font-default.svg#font-default') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "font-default";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == name {
+		$char: "\E001";
+	}
+	@if $filename == psd {
+		$char: "\E002";
+	}
+	@if $filename == right {
+		$char: "\E003";
+	}
+	@if $filename == task {
+		$char: "\E004";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-name {
+	@include icon(name);
+}
+.icon-psd {
+	@include icon(psd);
+}
+.icon-right {
+	@include icon(right);
+}
+.icon-task {
+	@include icon(task);
+}
