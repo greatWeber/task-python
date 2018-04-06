@@ -13,3 +13,9 @@ def login(request):
         return
     else:
         return render(request, 'polls/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        return
+    else:
+        return render(request,'polls/register.html')
