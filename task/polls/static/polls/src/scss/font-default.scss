@@ -28,17 +28,23 @@ $fontPath : '../fonts/';
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == name {
+	@if $filename == more {
 		$char: "\E001";
 	}
-	@if $filename == psd {
+	@if $filename == name {
 		$char: "\E002";
 	}
-	@if $filename == right {
+	@if $filename == psd {
 		$char: "\E003";
 	}
-	@if $filename == task {
+	@if $filename == quit {
 		$char: "\E004";
+	}
+	@if $filename == right {
+		$char: "\E005";
+	}
+	@if $filename == task {
+		$char: "\E006";
 	}
 
 	@return $char;
@@ -55,11 +61,17 @@ $fontPath : '../fonts/';
 	}
 }
 
+.icon-more {
+	@include icon(more);
+}
 .icon-name {
 	@include icon(name);
 }
 .icon-psd {
 	@include icon(psd);
+}
+.icon-quit {
+	@include icon(quit);
 }
 .icon-right {
 	@include icon(right);

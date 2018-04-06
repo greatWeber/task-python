@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 
 
 def index(request):
-    return HttpResponse('task system')
+    return render(request,'polls/index.html')
 
 def login(request):
     if request.method == 'POST':
