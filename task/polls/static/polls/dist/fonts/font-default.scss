@@ -34,17 +34,26 @@ $fontPath : '../fonts/';
 	@if $filename == name {
 		$char: "\E002";
 	}
-	@if $filename == psd {
+	@if $filename == progress {
 		$char: "\E003";
 	}
-	@if $filename == quit {
+	@if $filename == psd {
 		$char: "\E004";
 	}
-	@if $filename == right {
+	@if $filename == quit {
 		$char: "\E005";
 	}
-	@if $filename == task {
+	@if $filename == right {
 		$char: "\E006";
+	}
+	@if $filename == search {
+		$char: "\E007";
+	}
+	@if $filename == task {
+		$char: "\E008";
+	}
+	@if $filename == team {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -67,6 +76,9 @@ $fontPath : '../fonts/';
 .icon-name {
 	@include icon(name);
 }
+.icon-progress {
+	@include icon(progress);
+}
 .icon-psd {
 	@include icon(psd);
 }
@@ -76,6 +88,12 @@ $fontPath : '../fonts/';
 .icon-right {
 	@include icon(right);
 }
+.icon-search {
+	@include icon(search);
+}
 .icon-task {
 	@include icon(task);
+}
+.icon-team {
+	@include icon(team);
 }
