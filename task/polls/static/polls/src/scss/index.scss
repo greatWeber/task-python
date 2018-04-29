@@ -189,3 +189,192 @@ html, body {
     }
   }
 }
+// 新建团队
+.create-team-box {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  background: #fff;
+  display: none;
+
+  .create-team-form {
+    width: 80%;
+    padding: 20px 10%;
+    overflow: hidden;
+
+    .form-item {
+      width: 100%;
+      // height: 35px;
+      line-height: 35px;
+      margin-bottom: 20px;
+
+      label {
+        width: 50px;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .input {
+        width: 330px;
+        height: 35px;
+        border: none;
+        border-bottom: 1px solid #999;
+      }
+
+      .title {
+        width: 50px;
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .color-box {
+        width: 330px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+
+        .color-item {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          border: 3px solid #f5f5f5;
+          border-radius: 50%;
+          overflow: hidden;
+          background: #ccc;
+          margin: 0 10px;
+        }
+      }
+
+      .info {
+        width: 100%;
+        height: 150px;
+        overflow-y: scroll;
+        border: none;
+        border-bottom: 1px solid #999;
+        // border-right: 1px solid #999;
+        line-height: 2;
+      }
+    }
+
+    .form-btn {
+      width: 100%;
+      font-size: 0;
+      .btn-box {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+      }
+      .btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        margin: 0 auto;
+        font-size: 20px;
+      }
+      .no {
+        color:#dd9665;
+        border: 1px solid #dd9665;
+      }
+      .yes {
+        color:#50de5b;
+        border: 1px solid #50de5b;
+      }
+    }
+  }
+}
+
+
+// 任务列表
+.content-list {
+  width: 100%;
+  overflow: scroll;
+  margin-top: 101px;
+
+  .list-box {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    background: #fff;
+  }
+  .list-head {
+    margin: 10px;
+    border-bottom: 1px solid #333;
+
+    .list-name {
+      font-size: 16px;
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #333;
+      line-height: 35px;
+    }
+    .putUp {
+      margin-top: 8px;
+    }
+  }
+
+  .list-content {
+    .list-item {
+      margin:10px;
+      padding: 5px;
+      background: #f9f9f9;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      .tip {
+        position: absolute;
+        top:5px;
+        right: 5px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #fff;
+      }
+      .normal {
+        background: #61de3c;
+      }
+      .important {
+        background: #ed7c58;
+      }
+      .timeout {
+        background: #e7b521;
+      }
+      .list-title {
+        line-height: 2;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .info-bottom {
+        font-size: 16px;
+        color: #999;
+
+        .icon {
+          font-size: 18px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .list-add {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #999;
+    cursor: pointer;
+  }
+}

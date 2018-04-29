@@ -28,32 +28,47 @@ $fontPath : '../fonts/';
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == more {
+	@if $filename == add {
 		$char: "\E001";
 	}
-	@if $filename == name {
+	@if $filename == more {
 		$char: "\E002";
 	}
-	@if $filename == progress {
+	@if $filename == name {
 		$char: "\E003";
 	}
-	@if $filename == psd {
+	@if $filename == no {
 		$char: "\E004";
 	}
-	@if $filename == quit {
+	@if $filename == progress {
 		$char: "\E005";
 	}
-	@if $filename == right {
+	@if $filename == psd {
 		$char: "\E006";
 	}
-	@if $filename == search {
+	@if $filename == putUp {
 		$char: "\E007";
 	}
-	@if $filename == task {
+	@if $filename == quit {
 		$char: "\E008";
 	}
-	@if $filename == team {
+	@if $filename == right {
 		$char: "\E009";
+	}
+	@if $filename == search {
+		$char: "\E00A";
+	}
+	@if $filename == task {
+		$char: "\E00B";
+	}
+	@if $filename == team {
+		$char: "\E00C";
+	}
+	@if $filename == time {
+		$char: "\E00D";
+	}
+	@if $filename == yes {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -70,17 +85,26 @@ $fontPath : '../fonts/';
 	}
 }
 
+.icon-add {
+	@include icon(add);
+}
 .icon-more {
 	@include icon(more);
 }
 .icon-name {
 	@include icon(name);
 }
+.icon-no {
+	@include icon(no);
+}
 .icon-progress {
 	@include icon(progress);
 }
 .icon-psd {
 	@include icon(psd);
+}
+.icon-putUp {
+	@include icon(putUp);
 }
 .icon-quit {
 	@include icon(quit);
@@ -96,4 +120,10 @@ $fontPath : '../fonts/';
 }
 .icon-team {
 	@include icon(team);
+}
+.icon-time {
+	@include icon(time);
+}
+.icon-yes {
+	@include icon(yes);
 }
