@@ -162,6 +162,11 @@
           <span class="icon icon-add"></span>
         </div>
       </div>
+
+      <!-- 添加任务列表 -->
+      <div class="add-list">
+        <span class="icon icon-add"></span>
+      </div>
     </div>
 
   </div>
@@ -214,6 +219,37 @@
 
     </div>
   </form>
+</div>
+
+<!-- 新建任务 -->
+<div class="new-task">
+  <div class="new-task-head">
+    <h1 class="title">新建任务</h1>
+  </div>
+  <div class="new-task-content">
+    <form class="new-task-form">
+      <div class="form-item">
+        <input type="text" name="title" placeholder="请输入标题">
+      </div>
+      <div class="form-item">
+        <textarea name="content" placeholder="请输入内容"></textarea>
+      </div>
+      <div class="form-item">
+        <span class="name">负责人</span>
+          <div class="team-item">
+            <img src="{% static '/polls/dist/images/head.png' %}" alt="">
+        </div>
+        <span class="icon icon-add add-person"></span>
+      </div>
+      <div class="form-item">
+        <span class="name">分配</span>
+          <div class="team-item">
+            <img src="{% static '/polls/dist/images/head.png' %}" alt="">
+        </div>
+        <span class="icon icon-add add-person"></span>
+      </div>
+    </form>
+  </div>
 </div>
   </body>
 </html>
